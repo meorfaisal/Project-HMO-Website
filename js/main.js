@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initDropdownMenus();
     initViewToggle();
     initVideoCards();
-    initSearchBar();
+    initSearchOverlay();
 });
 
 /**
@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initMobileMenu() {
     const mobileToggle = document.getElementById('mobileToggle');
     const navMenu = document.getElementById('navMenu');
+    const navClose = document.getElementById('navClose');
 
     if (mobileToggle && navMenu) {
         // Toggle menu
@@ -31,6 +32,13 @@ function initMobileMenu() {
             navMenu.classList.toggle('active');
             document.body.classList.toggle('menu-open');
         });
+
+        // Close button in mobile menu
+        if (navClose) {
+            navClose.addEventListener('click', function() {
+                closeMenu();
+            });
+        }
 
         // Close menu when clicking outside (on overlay)
         document.addEventListener('click', function(e) {
@@ -209,8 +217,9 @@ function initHeroCarousel() {
  * Sticky Header
  */
 function initStickyHeader() {
-    const header = document.querySelector('.main-header');
-    if (!header) return;
+    const header = document.querySelector('.site-header');
+    const mainNav = document.querySelector('.main-nav');
+    if (!header || !mainNav) return;
 
     let lastScrollY = window.scrollY;
     let ticking = false;
@@ -219,9 +228,11 @@ function initStickyHeader() {
         const scrollY = window.scrollY;
 
         if (scrollY > 100) {
-            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
+            mainNav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
+            header.classList.add('scrolled');
         } else {
-            header.style.boxShadow = 'none';
+            mainNav.style.boxShadow = 'none';
+            header.classList.remove('scrolled');
         }
 
         lastScrollY = scrollY;
@@ -508,122 +519,65 @@ function showVideoModal(title) {
 }
 
 /**
- * Search Bar Enhancement
+ * Search Overlay
  */
-function initSearchBar() {
-    const searchInput = document.querySelector('.search-box input');
+function initSearchOverlay() {
+    const searchToggle = document.getElementById('searchToggle');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const searchClose = document.getElementById('searchClose');
+    const searchInput = searchOverlay ? searchOverlay.querySelector('input') : null;
 
-    if (!searchInput) return;
+    if (!searchToggle || !searchOverlay) return;
 
-    // Add search functionality
-    let searchTimeout;
+    // Toggle search overlay
+    searchToggle.addEventListener('click', function() {
+        searchOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        // Focus on input after animation
+        setTimeout(() => {
+            if (searchInput) searchInput.focus();
+        }, 300);
+    });
 
-    searchInput.addEventListener('input', function() {
-        clearTimeout(searchTimeout);
-        const query = this.value.trim();
+    // Close search overlay
+    if (searchClose) {
+        searchClose.addEventListener('click', function() {
+            closeSearchOverlay();
+        });
+    }
 
-        if (query.length >= 2) {
-            searchTimeout = setTimeout(() => {
-                // Here you would typically make an API call
-                console.log('Searching for:', query);
-
-                // Show search suggestions (placeholder)
-                showSearchSuggestions(query);
-            }, 300);
-        } else {
-            hideSearchSuggestions();
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
+            closeSearchOverlay();
         }
     });
 
-    searchInput.addEventListener('focus', function() {
-        this.parentElement.style.boxShadow = '0 0 0 3px rgba(129, 215, 66, 0.2)';
+    // Close when clicking outside
+    searchOverlay.addEventListener('click', function(e) {
+        if (e.target === searchOverlay) {
+            closeSearchOverlay();
+        }
     });
 
-    searchInput.addEventListener('blur', function() {
-        this.parentElement.style.boxShadow = '';
-        setTimeout(hideSearchSuggestions, 200);
-    });
-}
-
-function showSearchSuggestions(query) {
-    // Remove existing suggestions
-    hideSearchSuggestions();
-
-    const searchBox = document.querySelector('.search-box');
-    if (!searchBox) return;
-
-    const suggestions = document.createElement('div');
-    suggestions.className = 'search-suggestions';
-    suggestions.innerHTML = `
-        <div class="suggestion-item">
-            <i class="fas fa-search"></i>
-            <span>Search for "<strong>${query}</strong>"</span>
-        </div>
-        <div class="suggestion-item">
-            <i class="fas fa-fire"></i>
-            <span>Trending: Joe Flizzow Interview</span>
-        </div>
-        <div class="suggestion-item">
-            <i class="fas fa-music"></i>
-            <span>Latest: Cypher Vol.12</span>
-        </div>
-    `;
-
-    // Add styles if not exist
-    if (!document.querySelector('#search-suggestions-style')) {
-        const style = document.createElement('style');
-        style.id = 'search-suggestions-style';
-        style.textContent = `
-            .search-suggestions {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                margin-top: 10px;
-                background: #151515;
-                border: 1px solid #2a2a2a;
-                border-radius: 12px;
-                overflow: hidden;
-                z-index: 100;
-                animation: slideDown 0.2s ease;
-            }
-            @keyframes slideDown {
-                from { opacity: 0; transform: translateY(-10px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-            .suggestion-item {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                padding: 15px 20px;
-                cursor: pointer;
-                transition: background 0.2s;
-            }
-            .suggestion-item:hover {
-                background: rgba(129, 215, 66, 0.1);
-            }
-            .suggestion-item i {
-                color: #81d742;
-                width: 20px;
-            }
-            .suggestion-item span {
-                color: #b0b0b0;
-                font-size: 14px;
-            }
-            .suggestion-item strong {
-                color: white;
-            }
-        `;
-        document.head.appendChild(style);
+    function closeSearchOverlay() {
+        searchOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        if (searchInput) searchInput.value = '';
     }
 
-    searchBox.appendChild(suggestions);
-}
-
-function hideSearchSuggestions() {
-    const suggestions = document.querySelector('.search-suggestions');
-    if (suggestions) {
-        suggestions.remove();
+    // Search form submission
+    const searchForm = searchOverlay.querySelector('.search-form');
+    if (searchForm) {
+        searchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const query = searchInput ? searchInput.value.trim() : '';
+            if (query) {
+                console.log('Searching for:', query);
+                // Here you would typically redirect to search results
+                // window.location.href = `/search?q=${encodeURIComponent(query)}`;
+            }
+        });
     }
 }
 
@@ -705,7 +659,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const target = document.querySelector(href);
             if (target) {
                 e.preventDefault();
-                const headerHeight = document.querySelector('.main-header').offsetHeight;
+                const header = document.querySelector('.site-header');
+                const headerHeight = header ? header.offsetHeight : 80;
                 const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
 
                 window.scrollTo({

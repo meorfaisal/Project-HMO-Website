@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,115 +8,210 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-content">
-                <div class="top-bar-left">
-                    <span><i class="fas fa-headphones"></i> Streaming Now: HMO Radio - Malaysian Hip-Hop Top Charts</span>
-                </div>
-                <div class="top-bar-right">
-                    <div class="social-links">
-                        <a href="https://facebook.com/hearmeout2k18" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://instagram.com/hmo.tv" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://youtube.com/hearmeouttv" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="#" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+    <!-- Header -->
+    <header class="site-header">
+        <!-- Top Bar -->
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-inner">
+                    <div class="live-radio">
+                        <span class="live-dot"></span>
+                        <span>HMO Radio Live</span>
                     </div>
-                    <div class="lang-selector">
-                        <select>
-                            <option value="en">EN</option>
-                            <option value="my">BM</option>
-                        </select>
+                    <div class="header-top-right">
+                        <div class="social-links">
+                            <a href="https://facebook.com/hearmeout2k18" target="_blank" aria-label="Facebook"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://instagram.com/hmo.tv" target="_blank" aria-label="Instagram"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://youtube.com/hearmeouttv" target="_blank" aria-label="YouTube"><i
+                                    class="fab fa-youtube"></i></a>
+                            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                        <div class="header-divider"></div>
+                        <a href="#" class="header-link"><i class="fas fa-user"></i> Login</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Main Navigation -->
-    <header class="main-header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="index.html">
-                        <span class="logo-text">HEAR<span class="highlight">ME</span>OUT</span>
-                        <span class="logo-tagline">Malaysian Hip-Hop</span>
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-inner">
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">HMO<span class="highlight">.TV</span></span>
+                            <span class="logo-sub">Hear Me Out</span>
+                        </div>
                     </a>
-                </div>
 
-                <div class="nav-menu" id="navMenu">
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active">Home</a>
-                        </li>
-                        <li class="nav-item has-dropdown">
-                            <a href="#" class="nav-link">Interview/Cypher/Whiteroom <i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">InterviewCypher Season 5</a></li>
-                                <li><a href="#">InterviewCypher Season 4</a></li>
-                                <li><a href="#">InterviewCypher Season 3</a></li>
-                                <li><a href="#">HMO Whiteroom</a></li>
-                                <li><a href="#">HanTok The Interview</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item has-dropdown">
-                            <a href="#" class="nav-link">News/Review/Competition <i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Lokal Trivia</a></li>
-                                <li><a href="#">Min's React</a></li>
-                                <li><a href="#">HMO EDU</a></li>
-                                <li><a href="#">Style Dough!</a></li>
-                                <li><a href="#">Rap Battle</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Music Videos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Events/Tours</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">HMO Radio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Shop</a>
-                        </li>
-                    </ul>
-                </div>
+                    <!-- Navigation Menu -->
+                    <div class="nav-menu" id="navMenu">
+                        <!-- Mobile Header -->
+                        <div class="nav-mobile-header">
+                            <span class="nav-mobile-title">Menu</span>
+                            <button class="nav-close" id="navClose" aria-label="Close menu">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
 
-                <div class="nav-actions">
-                    <button class="btn-search" aria-label="Search">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active">
+                                    <i class="fas fa-home nav-icon"></i>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="nav-item has-dropdown">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-video nav-icon"></i>
+                                    <span>Content</span>
+                                    <i class="fas fa-chevron-down nav-arrow"></i>
+                                </a>
+                                <div class="dropdown-menu mega-menu">
+                                    <div class="mega-menu-inner">
+                                        <div class="mega-col">
+                                            <h4 class="mega-title">InterviewCypher</h4>
+                                            <ul>
+                                                <li><a href="#">Season 5 <span class="badge-new">New</span></a></li>
+                                                <li><a href="#">Season 4</a></li>
+                                                <li><a href="#">Season 3</a></li>
+                                                <li><a href="#">All Seasons</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="mega-col">
+                                            <h4 class="mega-title">Sessions</h4>
+                                            <ul>
+                                                <li><a href="#">HMO Whiteroom</a></li>
+                                                <li><a href="#">HanTok Interview</a></li>
+                                                <li><a href="#">Lokal Trivia</a></li>
+                                                <li><a href="#">Min's React</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="mega-col">
+                                            <h4 class="mega-title">More</h4>
+                                            <ul>
+                                                <li><a href="#">Music Videos</a></li>
+                                                <li><a href="#">HMO EDU</a></li>
+                                                <li><a href="#">Style Dough!</a></li>
+                                                <li><a href="#">Rap Battle</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-broadcast-tower nav-icon"></i>
+                                    <span>Radio</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-calendar-alt nav-icon"></i>
+                                    <span>Events</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-newspaper nav-icon"></i>
+                                    <span>News</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-shopping-bag nav-icon"></i>
+                                    <span>Shop</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Mobile Footer -->
+                        <div class="nav-mobile-footer">
+                            <div class="nav-mobile-social">
+                                <a href="https://facebook.com/hearmeout2k18" target="_blank"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="https://instagram.com/hmo.tv" target="_blank"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="https://youtube.com/hearmeouttv" target="_blank"><i
+                                        class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-tiktok"></i></a>
+                            </div>
+                            <a href="#" class="nav-mobile-cta">
+                                <i class="fas fa-bell"></i> Subscribe Now
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Nav Actions -->
+                    <div class="nav-actions">
+                        <button class="nav-action-btn search-toggle" id="searchToggle" aria-label="Search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <a href="#" class="nav-action-btn cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-badge">0</span>
+                        </a>
+                        <a href="#" class="btn-subscribe">
+                            <i class="fas fa-bell"></i>
+                            <span>Subscribe</span>
+                        </a>
+                        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="container">
+                <div class="search-overlay-inner">
+                    <form class="search-form" role="search">
                         <i class="fas fa-search"></i>
-                    </button>
-                    <a href="#" class="btn-cart">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">0</span>
-                    </a>
-                    <a href="#" class="btn-primary">Subscribe</a>
-                    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+                        <input type="search" name="q" placeholder="Search videos, artists, news..." autocomplete="off">
+                        <button type="button" class="search-close" id="searchClose" aria-label="Close search">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </form>
+                    <div class="search-suggestions">
+                        <span class="search-label">Popular:</span>
+                        <a href="#">InterviewCypher</a>
+                        <a href="#">Whiteroom</a>
+                        <a href="#">K-Clique</a>
+                        <a href="#">Joe Flizzow</a>
+                    </div>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-carousel" id="heroCarousel">
-            <div class="hero-slide active" style="background-image: linear-gradient(rgba(12,12,12,0.6), rgba(12,12,12,0.9)), url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1920');">
+            <div class="hero-slide active"
+                style="background-image: linear-gradient(rgba(12,12,12,0.6), rgba(12,12,12,0.9)), url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1920');">
                 <div class="container">
                     <div class="hero-content">
                         <span class="hero-tag">Featured</span>
                         <h1 class="hero-title">The Voice of Malaysian Hip-Hop</h1>
-                        <p class="hero-subtitle">Your #1 source for Malaysian hip-hop content. Interviews, cyphers, music videos, and exclusive whiteroom sessions.</p>
+                        <p class="hero-subtitle">Your #1 source for Malaysian hip-hop content. Interviews, cyphers,
+                            music videos, and exclusive whiteroom sessions.</p>
                         <div class="hero-actions">
                             <a href="#" class="btn-primary btn-lg"><i class="fas fa-play"></i> Watch Latest</a>
                             <a href="#" class="btn-outline btn-lg">Explore Content</a>
@@ -123,12 +219,14 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-slide" style="background-image: linear-gradient(rgba(12,12,12,0.6), rgba(12,12,12,0.9)), url('https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?w=1920');">
+            <div class="hero-slide"
+                style="background-image: linear-gradient(rgba(12,12,12,0.6), rgba(12,12,12,0.9)), url('https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?w=1920');">
                 <div class="container">
                     <div class="hero-content">
                         <span class="hero-tag">New Release</span>
                         <h1 class="hero-title">InterviewCypher Season 5</h1>
-                        <p class="hero-subtitle">Watch the latest episodes featuring IJ & RAFWY, Orga, Rudeen, SniperSosa, Hilmy Ashley, and more!</p>
+                        <p class="hero-subtitle">Watch the latest episodes featuring IJ & RAFWY, Orga, Rudeen,
+                            SniperSosa, Hilmy Ashley, and more!</p>
                         <div class="hero-actions">
                             <a href="#" class="btn-primary btn-lg"><i class="fas fa-play"></i> Watch Now</a>
                             <a href="#" class="btn-outline btn-lg">All Episodes</a>
@@ -136,14 +234,17 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-slide" style="background-image: linear-gradient(rgba(12,12,12,0.6), rgba(12,12,12,0.9)), url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=1920');">
+            <div class="hero-slide"
+                style="background-image: linear-gradient(rgba(12,12,12,0.6), rgba(12,12,12,0.9)), url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=1920');">
                 <div class="container">
                     <div class="hero-content">
                         <span class="hero-tag">HMO Radio</span>
                         <h1 class="hero-title">Malaysian Hip-Hop Top Charts</h1>
-                        <p class="hero-subtitle">Tune in to HMO Radio for the Top 12, Top 30, and Top 50 Malaysian hip-hop charts updated weekly!</p>
+                        <p class="hero-subtitle">Tune in to HMO Radio for the Top 12, Top 30, and Top 50 Malaysian
+                            hip-hop charts updated weekly!</p>
                         <div class="hero-actions">
-                            <a href="#" class="btn-primary btn-lg"><i class="fas fa-broadcast-tower"></i> Listen Live</a>
+                            <a href="#" class="btn-primary btn-lg"><i class="fas fa-broadcast-tower"></i> Listen
+                                Live</a>
                             <a href="#" class="btn-outline btn-lg">View Charts</a>
                         </div>
                     </div>
@@ -153,9 +254,9 @@
         <div class="hero-controls">
             <button class="hero-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
             <div class="hero-dots">
-                <button class="hero-dot active" data-slide="0"></button>
-                <button class="hero-dot" data-slide="1"></button>
-                <button class="hero-dot" data-slide="2"></button>
+                <button type="button" class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+                <button type="button" class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+                <button type="button" class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
             </div>
             <button class="hero-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
         </div>
@@ -217,7 +318,7 @@
             <div class="filter-bar">
                 <div class="search-box">
                     <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Search videos, artists, news...">
+                    <input type="search" name="search" placeholder="Search videos, artists, news..." autocomplete="off">
                 </div>
                 <div class="filter-options">
                     <select class="filter-select">
@@ -234,8 +335,8 @@
                         <option value="views">Most Views</option>
                     </select>
                     <div class="view-toggle">
-                        <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
-                        <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                        <button type="button" class="view-btn active" data-view="grid" aria-label="Grid view"><i class="fas fa-th"></i></button>
+                        <button type="button" class="view-btn" data-view="list" aria-label="List view"><i class="fas fa-list"></i></button>
                     </div>
                 </div>
             </div>
@@ -260,11 +361,12 @@
                         <i class="fas fa-star"></i> Featured
                     </div>
                     <div class="card-media">
-                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600" alt="Iri Bilang Boss">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600"
+                            alt="Iri Bilang Boss">
                         <div class="card-overlay">
-                            <button class="play-btn"><i class="fas fa-play"></i></button>
-                            <span class="duration">3:45</span>
+                            <button type="button" class="play-btn"><i class="fas fa-play"></i></button>
                         </div>
+                        <span class="duration">3:45</span>
                     </div>
                     <div class="card-content">
                         <div class="card-meta">
@@ -272,7 +374,8 @@
                             <span class="card-views"><i class="far fa-eye"></i> Trending</span>
                         </div>
                         <h3 class="card-title">Saifulke ft Bobby D - "Iri Bilang Boss"</h3>
-                        <p class="card-excerpt">The latest collaboration bringing fire bars and hard-hitting beats...</p>
+                        <p class="card-excerpt">The latest collaboration bringing fire bars and hard-hitting beats...
+                        </p>
                         <div class="card-tags">
                             <span class="tag">#MusicVideo</span>
                             <span class="tag">#Saifulke</span>
@@ -285,9 +388,9 @@
                     <div class="card-media">
                         <img src="https://images.unsplash.com/photo-1598387993441-a364f854c3e1?w=600" alt="Certified E">
                         <div class="card-overlay">
-                            <button class="play-btn"><i class="fas fa-play"></i></button>
-                            <span class="duration">4:20</span>
+                            <button type="button" class="play-btn"><i class="fas fa-play"></i></button>
                         </div>
+                        <span class="duration">4:20</span>
                     </div>
                     <div class="card-content">
                         <div class="card-meta">
@@ -308,9 +411,9 @@
                     <div class="card-media">
                         <img src="https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?w=600" alt="Semboyan">
                         <div class="card-overlay">
-                            <button class="play-btn"><i class="fas fa-play"></i></button>
-                            <span class="duration">3:30</span>
+                            <button type="button" class="play-btn"><i class="fas fa-play"></i></button>
                         </div>
+                        <span class="duration">3:30</span>
                     </div>
                     <div class="card-content">
                         <div class="card-meta">
@@ -331,9 +434,9 @@
                     <div class="card-media">
                         <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600" alt="Siapa">
                         <div class="card-overlay">
-                            <button class="play-btn"><i class="fas fa-play"></i></button>
-                            <span class="duration">4:15</span>
+                            <button type="button" class="play-btn"><i class="fas fa-play"></i></button>
                         </div>
+                        <span class="duration">4:15</span>
                     </div>
                     <div class="card-content">
                         <div class="card-meta">
@@ -354,9 +457,9 @@
                     <div class="card-media">
                         <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600" alt="Kami Kasi">
                         <div class="card-overlay">
-                            <button class="play-btn"><i class="fas fa-play"></i></button>
-                            <span class="duration">3:55</span>
+                            <button type="button" class="play-btn"><i class="fas fa-play"></i></button>
                         </div>
+                        <span class="duration">3:55</span>
                     </div>
                     <div class="card-content">
                         <div class="card-meta">
@@ -377,9 +480,9 @@
                     <div class="card-media">
                         <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600" alt="Garis">
                         <div class="card-overlay">
-                            <button class="play-btn"><i class="fas fa-play"></i></button>
-                            <span class="duration">4:00</span>
+                            <button type="button" class="play-btn"><i class="fas fa-play"></i></button>
                         </div>
+                        <span class="duration">4:00</span>
                     </div>
                     <div class="card-content">
                         <div class="card-meta">
@@ -418,9 +521,9 @@
                     <div class="card-media">
                         <img src="https://images.unsplash.com/photo-1598387993441-a364f854c3e1?w=600" alt="IJ & RAFWY">
                         <div class="card-overlay">
-                            <button class="play-btn"><i class="fas fa-play"></i></button>
-                            <span class="duration">18:30</span>
+                            <button type="button" class="play-btn"><i class="fas fa-play"></i></button>
                         </div>
+                        <span class="duration">18:30</span>
                     </div>
                     <div class="card-content">
                         <div class="card-meta">
@@ -428,7 +531,8 @@
                             <span class="card-views"><i class="far fa-eye"></i> Latest</span>
                         </div>
                         <h3 class="card-title">IJ & RAFWY (Budak Belakang)</h3>
-                        <p class="card-excerpt">The Budak Belakang duo drops bars and shares their journey in the game...</p>
+                        <p class="card-excerpt">The Budak Belakang duo drops bars and shares their journey in the
+                            game...</p>
                         <div class="card-tags">
                             <span class="tag">#InterviewCypher</span>
                             <span class="tag">#Season5</span>
@@ -439,11 +543,12 @@
                 <!-- Season 5 EP 5 -->
                 <article class="content-card">
                     <div class="card-media">
-                        <img src="https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?w=600" alt="Orga Rudeen SniperSosa">
+                        <img src="https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?w=600"
+                            alt="Orga Rudeen SniperSosa">
                         <div class="card-overlay">
-                            <button class="play-btn"><i class="fas fa-play"></i></button>
-                            <span class="duration">22:15</span>
+                            <button type="button" class="play-btn"><i class="fas fa-play"></i></button>
                         </div>
+                        <span class="duration">22:15</span>
                     </div>
                     <div class="card-content">
                         <div class="card-meta">
@@ -451,7 +556,8 @@
                             <span class="card-views"><i class="far fa-eye"></i> Season 5</span>
                         </div>
                         <h3 class="card-title">Orga, Rudeen & SniperSosa</h3>
-                        <p class="card-excerpt">Triple threat episode featuring three heavy hitters going bar for bar...</p>
+                        <p class="card-excerpt">Triple threat episode featuring three heavy hitters going bar for bar...
+                        </p>
                         <div class="card-tags">
                             <span class="tag">#InterviewCypher</span>
                             <span class="tag">#Orga</span>
@@ -462,11 +568,12 @@
                 <!-- Season 5 EP 4 -->
                 <article class="content-card">
                     <div class="card-media">
-                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600" alt="Hilmy Ashley Saiful Apek">
+                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600"
+                            alt="Hilmy Ashley Saiful Apek">
                         <div class="card-overlay">
-                            <button class="play-btn"><i class="fas fa-play"></i></button>
-                            <span class="duration">19:45</span>
+                            <button type="button" class="play-btn"><i class="fas fa-play"></i></button>
                         </div>
+                        <span class="duration">19:45</span>
                     </div>
                     <div class="card-content">
                         <div class="card-meta">
@@ -492,7 +599,8 @@
                 <div class="feature-content slide-left">
                     <span class="feature-tag">Now Streaming</span>
                     <h2 class="feature-title">HMO Radio Charts</h2>
-                    <p class="feature-text">Tune in to the heartbeat of Malaysian hip-hop. Weekly updated charts featuring the hottest tracks from the scene.</p>
+                    <p class="feature-text">Tune in to the heartbeat of Malaysian hip-hop. Weekly updated charts
+                        featuring the hottest tracks from the scene.</p>
                     <ul class="feature-list">
                         <li><i class="fas fa-check"></i> HMO Top 12 Chart</li>
                         <li><i class="fas fa-check"></i> HMO Top 30 Chart</li>
@@ -528,7 +636,7 @@
                     <div class="artist-image">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Joe Flizzow">
                         <div class="artist-overlay">
-                            <button class="artist-play"><i class="fas fa-play"></i></button>
+                            <button type="button" class="artist-play" aria-label="Play"><i class="fas fa-play"></i></button>
                         </div>
                     </div>
                     <div class="artist-info">
@@ -540,7 +648,7 @@
                     <div class="artist-image">
                         <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400" alt="K-Clique">
                         <div class="artist-overlay">
-                            <button class="artist-play"><i class="fas fa-play"></i></button>
+                            <button type="button" class="artist-play" aria-label="Play"><i class="fas fa-play"></i></button>
                         </div>
                     </div>
                     <div class="artist-info">
@@ -552,7 +660,7 @@
                     <div class="artist-image">
                         <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400" alt="Yung Raja">
                         <div class="artist-overlay">
-                            <button class="artist-play"><i class="fas fa-play"></i></button>
+                            <button type="button" class="artist-play" aria-label="Play"><i class="fas fa-play"></i></button>
                         </div>
                     </div>
                     <div class="artist-info">
@@ -564,7 +672,7 @@
                     <div class="artist-image">
                         <img src="https://images.unsplash.com/photo-1534614971-6be99a7a3ffd?w=400" alt="Azamrhadio">
                         <div class="artist-overlay">
-                            <button class="artist-play"><i class="fas fa-play"></i></button>
+                            <button type="button" class="artist-play" aria-label="Play"><i class="fas fa-play"></i></button>
                         </div>
                     </div>
                     <div class="artist-info">
@@ -576,7 +684,7 @@
                     <div class="artist-image">
                         <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400" alt="Bobby D">
                         <div class="artist-overlay">
-                            <button class="artist-play"><i class="fas fa-play"></i></button>
+                            <button type="button" class="artist-play" aria-label="Play"><i class="fas fa-play"></i></button>
                         </div>
                     </div>
                     <div class="artist-info">
@@ -602,12 +710,15 @@
             <div class="news-grid">
                 <article class="news-card large">
                     <div class="news-image">
-                        <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800" alt="HanTok Interview">
+                        <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800"
+                            alt="HanTok Interview">
                     </div>
                     <div class="news-content">
                         <span class="news-category">HanTok The Interview</span>
                         <h3 class="news-title">Joe Flizzow & Yung Raja - Exclusive Sit Down</h3>
-                        <p class="news-excerpt">Deep dive conversation with two legendary figures in the Malaysian and Singaporean hip-hop scenes. Discussing legacy, the future, and what it takes to make it...</p>
+                        <p class="news-excerpt">Deep dive conversation with two legendary figures in the Malaysian and
+                            Singaporean hip-hop scenes. Discussing legacy, the future, and what it takes to make it...
+                        </p>
                         <div class="news-meta">
                             <span><i class="far fa-calendar"></i> Featured</span>
                             <span><i class="far fa-user"></i> HMO Editorial</span>
@@ -617,12 +728,14 @@
 
                 <article class="news-card">
                     <div class="news-image">
-                        <img src="https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?w=600" alt="Lokal Trivia">
+                        <img src="https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?w=600"
+                            alt="Lokal Trivia">
                     </div>
                     <div class="news-content">
                         <span class="news-category">Lokal Trivia</span>
                         <h3 class="news-title">Quick Fire with Buck, FIQ, RXF Rhaled & More</h3>
-                        <p class="news-excerpt">Short interview segments featuring Buck, Ahbank, GMG, Kagendran, Sora, Dment Si Lain, Killa Driz, NVKA...</p>
+                        <p class="news-excerpt">Short interview segments featuring Buck, Ahbank, GMG, Kagendran, Sora,
+                            Dment Si Lain, Killa Driz, NVKA...</p>
                         <div class="news-meta">
                             <span><i class="far fa-calendar"></i> Series</span>
                         </div>
@@ -636,7 +749,8 @@
                     <div class="news-content">
                         <span class="news-category">Min's React</span>
                         <h3 class="news-title">Reaction Videos - FIQ, Heidi & More</h3>
-                        <p class="news-excerpt">Watch reactions to the latest tracks from Malaysian hip-hop artists...</p>
+                        <p class="news-excerpt">Watch reactions to the latest tracks from Malaysian hip-hop artists...
+                        </p>
                         <div class="news-meta">
                             <span><i class="far fa-calendar"></i> Reactions</span>
                         </div>
@@ -664,11 +778,12 @@
                         <i class="fas fa-star"></i> Season 2
                     </div>
                     <div class="card-media">
-                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600" alt="Mad Doby Whiteroom">
+                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600"
+                            alt="Mad Doby Whiteroom">
                         <div class="card-overlay">
-                            <button class="play-btn"><i class="fas fa-play"></i></button>
-                            <span class="duration">8:45</span>
+                            <button type="button" class="play-btn"><i class="fas fa-play"></i></button>
                         </div>
+                        <span class="duration">8:45</span>
                     </div>
                     <div class="card-content">
                         <div class="card-meta">
@@ -689,9 +804,9 @@
                     <div class="card-media">
                         <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600" alt="Maruxa Lynd">
                         <div class="card-overlay">
-                            <button class="play-btn"><i class="fas fa-play"></i></button>
-                            <span class="duration">6:30</span>
+                            <button type="button" class="play-btn"><i class="fas fa-play"></i></button>
                         </div>
+                        <span class="duration">6:30</span>
                     </div>
                     <div class="card-content">
                         <div class="card-meta">
@@ -710,11 +825,12 @@
                 <!-- Mona Garis Part 2 -->
                 <article class="content-card">
                     <div class="card-media">
-                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600" alt="Mona Garis Part 2">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600"
+                            alt="Mona Garis Part 2">
                         <div class="card-overlay">
-                            <button class="play-btn"><i class="fas fa-play"></i></button>
-                            <span class="duration">4:10</span>
+                            <button type="button" class="play-btn"><i class="fas fa-play"></i></button>
                         </div>
+                        <span class="duration">4:10</span>
                     </div>
                     <div class="card-content">
                         <div class="card-meta">
@@ -792,7 +908,8 @@
                         <span class="event-weekday">2019</span>
                     </div>
                     <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=600" alt="Rash TheWarchild">
+                        <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=600"
+                            alt="Rash TheWarchild">
                     </div>
                     <div class="event-content">
                         <span class="event-badge">Winner</span>
@@ -825,7 +942,7 @@
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400" alt="HMO Tee">
                         <div class="product-overlay">
-                            <button class="btn-quick-view">Notify Me</button>
+                            <button type="button" class="btn-quick-view">Notify Me</button>
                         </div>
                     </div>
                     <div class="product-content">
@@ -839,7 +956,7 @@
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400" alt="HMO Hoodie">
                         <div class="product-overlay">
-                            <button class="btn-quick-view">Notify Me</button>
+                            <button type="button" class="btn-quick-view">Notify Me</button>
                         </div>
                     </div>
                     <div class="product-content">
@@ -853,7 +970,7 @@
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=400" alt="HMO Cap">
                         <div class="product-overlay">
-                            <button class="btn-quick-view">Notify Me</button>
+                            <button type="button" class="btn-quick-view">Notify Me</button>
                         </div>
                     </div>
                     <div class="product-content">
@@ -867,7 +984,7 @@
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400" alt="HMO Merch">
                         <div class="product-overlay">
-                            <button class="btn-quick-view">Notify Me</button>
+                            <button type="button" class="btn-quick-view">Notify Me</button>
                         </div>
                     </div>
                     <div class="product-content">
@@ -885,7 +1002,8 @@
             <div class="newsletter-content">
                 <div class="newsletter-text">
                     <h2>Stay In The Loop</h2>
-                    <p>Subscribe to our newsletter for exclusive content, early access to new releases, and the latest updates from the Malaysian hip-hop scene.</p>
+                    <p>Subscribe to our newsletter for exclusive content, early access to new releases, and the latest
+                        updates from the Malaysian hip-hop scene.</p>
                 </div>
                 <form class="newsletter-form">
                     <div class="form-group">
@@ -933,9 +1051,11 @@
                     <div class="footer-logo">
                         <span class="logo-text">HEAR<span class="highlight">ME</span>OUT</span>
                     </div>
-                    <p class="footer-desc">Malaysia's premier independent hip-hop platform. Elevating the culture, one beat at a time. Based in Oasis, Ara Damansara.</p>
+                    <p class="footer-desc">Malaysia's premier independent hip-hop platform. Elevating the culture, one
+                        beat at a time. Based in Oasis, Ara Damansara.</p>
                     <div class="footer-social">
-                        <a href="https://facebook.com/hearmeout2k18" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://facebook.com/hearmeout2k18" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
                         <a href="https://instagram.com/hmo.tv" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="https://youtube.com/hearmeouttv" target="_blank"><i class="fab fa-youtube"></i></a>
                         <a href="#"><i class="fab fa-tiktok"></i></a>
@@ -1008,4 +1128,5 @@
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
